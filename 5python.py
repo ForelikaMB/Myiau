@@ -1,0 +1,154 @@
+# # НОМЕР 5
+# for i in range(1,1000):
+#     r = bin(i)[2:]
+#     r2 = ''
+#     for n in r:
+#         if n == "1": r2+= "10"
+#         if n == "0": r2+= "01"
+#     if int(r2,2 )> 63:
+#         print(int(r2,2))
+#         break
+# def troi(n):
+#     s = ""
+#     while n >0:
+#         s = str(n%3) + s
+#         n //=3
+#     return s
+# for n in range(1,1000):
+#     r= troi(n)
+#     if n %3 == 0:
+#         r = "1" + r + "02"
+#     else: r += troi((n%3)*4)
+#     if int(r,3)< 199:
+#         print(n)
+# ans = []
+# for i in range(1,1000):
+#     r = bin(i)[2:]
+#     if i%3==0:
+#         r = r + r[-3:]
+#     else: r = r +  bin((i%3)*3)[2:]
+#     if int(r,2)>151:
+#         ans.append(int(r,2))
+# print(min(ans))
+# ans = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if n %3 == 0:
+#         r+= r[-3:]
+#     else: r += bin((n%3)*3)[2:]
+#     if int(r,2)<170:
+#         ans.append(int(r,2))
+# print(max(ans))
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if r.count("1") %2 == 0:
+#         r ="1"+ r[2:] + "0"
+#     else:
+#         r = "11" + r[2:] + "1"
+#     if  int(r,2) >49:
+#         print(n)
+
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if r.count('1')%2==0:
+#         r ="1" + r[2:] +"0"
+#     else: r = "11" +r[2:] + "1"
+#     if int(r,2)>49:
+        
+#         print(n,int(r,2))
+# nt = []
+# for n in range(1,1000):
+#     n[0]+n[1]
+#     nt+= n
+#     n[1]+n[2]
+#     nt +=n
+#     n[2]+n[3]
+#     nt +=n
+# print(nt)
+
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     r = r + bin(n%3)
+#     r = r + bin(r%5)
+#     cnt = r
+# print(int(r,2))
+# def troi(n):
+#     s = ""
+#     while n >0:
+#         s = str(n%3) + s
+#         n //=3
+#     return s
+# for n in range(1,1000):
+#     r= troi(n)
+#     if n %3 == 0:
+#         r = "1" + r + "02"
+#     else: r += troi((n%3)*4)
+#     if int(r,3)< 199:
+#         print(n)
+# def troi(n):
+#     s = ""
+#     while n >0:
+#         s = str(n%3) +s
+#         n//=3
+#         return s
+# for n in range(1,1000):
+#     r = troi(n)
+#     if sum(r)%3==0 :
+#         r = r[-2:] +"112"
+#     else:
+#         r = r +troi(sum(r))
+#     if (int(r,3)%2==0)<679:
+#         print(r)
+# def f(n):
+#     s=''
+#     while n > 0:
+#         s = str(n%3) + s
+#         n //= 3
+#     return s
+# c = []
+# for n in range(1000):
+#     s = f(n)
+#     summa = s.count('1') + s.count('2')*2
+#     if summa%3 == 0:
+#         s = '112' + s[2:]
+#     else:
+#         s = s + f(summa)
+#     r = int(s,3)
+#     if r <= 679 and r%2 == 0:
+#         c.append(r)
+# print(max(c))
+# count = []
+# for i in range(10,1001):
+#     a = bin(i)[2:]
+#     a[1:]
+#     while a[0]==0:
+#         a[1:]
+#     v = int(a,2)
+#     g = int(a)-v
+#     count.append(g)
+# print(len(count))
+# l = []
+# for N in range(1,1000):
+#     r = bin(N)[2:]
+#     r += str((r.count('1')%2))
+#     r += str((r.count('1')%2))
+#     if int(r,2) >105:
+#         l.append(N)
+# print(min(l))
+# for N in range(1,1000):
+#     r = bin(N)[2:]
+#     if r%3 == 0:
+#         r+= r[-3:]
+l = []
+for N in range(0,256):
+    R = bin(N)[2:]
+    c = int(R,10)
+    while c != 134:
+        # for r in range(1000):
+            R.replace('0','1',1)
+            
+        # for l in range(1000):
+            R.replace("0",'1',1)
+            break
+print(c-N)
+print(int('6',10))

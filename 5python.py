@@ -139,16 +139,80 @@
 #     r = bin(N)[2:]
 #     if r%3 == 0:
 #         r+= r[-3:]
-l = []
-for N in range(0,256):
-    R = bin(N)[2:]
-    c = int(R,10)
-    while c != 134:
-        # for r in range(1000):
-            R.replace('0','1',1)
+# l = []
+# for N in range(0,256):
+#     R = bin(N)[2:]
+#     c = int(R,10)
+#     while c != 134:
+#         # for r in range(1000):
+#             R.replace('0','1',1)
             
-        # for l in range(1000):
-            R.replace("0",'1',1)
-            break
-print(c-N)
-print(int('6',10))
+#         # for l in range(1000):
+#             R.replace("0",'1',1)
+#             break
+# print(c-N)
+# print(int('6',10))
+
+# ДЗ 1
+# a = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     r = str(r) + str(r.count('1')%2)
+#     r = str(r) + str(r.count('1')%2)
+#     if (int(r,2)>105):
+#         a.append(n)
+# print(min(a))
+
+# s = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if int(n)%3==0:
+#          r = r + r[-3:]
+#     else:
+#          r = r + bin((n%3)*3)[2:] 
+#     if int(r,2)<100:
+#          s.append(n)
+        
+# print(max(s))   
+
+# a = []
+# def f(n):
+#      s=''
+#      while n > 0:
+#          s = str(n%3) + s
+#          n //= 3
+#      return s
+# for n in range(1,1000):
+#      r = f(n)
+#      if n%3 == 0 :
+#           r = r + r[-3:]
+#      else:
+#           r = r + f((n%3)*3)
+#      if int(r,3)<76:
+#         a.append(n)
+# print(max(a))
+
+#4
+# a = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if (r.count("1")%2)==0:
+#         r ='10' + r[2:] + '0'
+#     else:
+#         r = '11'+ r[2:] +'1'
+#     if int(r,2)>30:
+#        a.append(n)
+# print(min(a))
+
+
+a = []
+for n in range(1,1000):
+    r = oct(n)[2:]
+    if (str(n).count('2')+str(n).count('4')+str(n).count('6')+str(n).count('0'))%2 != 0:
+        r = r[-3:] + '46'
+    if (str(n).count('2')+str(n).count('4')+str(n).count('6')+str(n).count('0'))%2 == 0:
+        r = oct((n%8)*5)[2:] + r
+    if n >=80:
+        r = int(r,8)
+        a.append(r)
+print(min(a))

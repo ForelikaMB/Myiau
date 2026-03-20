@@ -205,14 +205,97 @@
 # print(min(a))
 
 
+# a = []
+# for n in range(1,1000):
+#     r = oct(n)[2:]
+#     if (str(n).count('2')+str(n).count('4')+str(n).count('6')+str(n).count('0'))%2 != 0:
+#         r = r[-3:] + '46'
+#     if (str(n).count('2')+str(n).count('4')+str(n).count('6')+str(n).count('0'))%2 == 0:
+#         r = oct((n%8)*5)[2:] + r
+#     if n >=80:
+#         r = int(r,8)
+#         a.append(r)
+# print(min(a))
+
+# c = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     r = r + str((r.count('1'))%2)
+#     r = r + str((r.count('1'))%2)
+#     if int(r,2)<=120:
+#         c.append(n)
+# print(max(c))
+
+# a = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if r.count('0')>r.count('1'):
+#         r = '10' + r[2:] + '0'
+#     else:
+#         r = '1' + r[:-2] + '10'
+#     r = int(r,2)
+#     if r >=98:
+#         a.append(n)
+# print(min(a))
+
+# a = []
+# def troi(n):
+#     s = ''
+#     while n >0:
+#         s = str(n%3) +s
+#         n//=3
+#     return s
+# for n in range(1,1000):
+#     r = troi(n)
+#     if n%3 == 0:
+#         r = r + r[-2:]
+#     else:
+#         r = r +troi((n%3)*5)
+#     if int(r,3) >213:
+#         a.append(int(r,3))
+# print(min(a))
+
+# a=[]
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if n%2==0:
+#         r+='10'
+#     else:
+#         r= '1'+r+'1'
+#     if 9<int(r,2) <99:
+#         a.append(n)
+# print(min(a))
+# a = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if len(r)%2==0:
+#         r = r[len(r)//2:]+r[:len(r)//2]
+#     if int(r,2)<=26:
+#         a.append(n)
+# print(max(a))
+
+# a =[]
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if n%7==0:
+#         if r.count('1')%2==0:
+#          r +="1"
+#         else: r+='0'
+#         if int(r,2)%2==0:
+#          r+='10'
+#         else: r+='01'
+#         if int(r,2)<1000:
+#          a.append(int(r,2))
+# print(max(a))
+
 a = []
-for n in range(1,1000):
-    r = oct(n)[2:]
-    if (str(n).count('2')+str(n).count('4')+str(n).count('6')+str(n).count('0'))%2 != 0:
-        r = r[-3:] + '46'
-    if (str(n).count('2')+str(n).count('4')+str(n).count('6')+str(n).count('0'))%2 == 0:
-        r = oct((n%8)*5)[2:] + r
-    if n >=80:
-        r = int(r,8)
-        a.append(r)
-print(min(a))
+for n in range(101,1000):
+    r = hex(n)[2:]
+    r = r.replace("b",'2')
+    if len([x for x in r if x in '13579bdf'])>2:
+        r+="e"
+    else:
+        r= "f"+ r
+        if int(r,16)>4001:
+            a.append([int(r,16),n])
+print(sorted(a))

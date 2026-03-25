@@ -97,17 +97,78 @@
 #             cnt +=a
 # print(cnt)
 
-from itertools import *
-cnt = 0
-for i in permutations("МАТВЕЙ"):
-    a = ''.join(i)
-    if a[0] != 'Й' and a.count('АЕ')==0:
-        cnt+=1
+# from itertools import *
+# cnt = 0
+# for i in permutations("МАТВЕЙ"):
+#     a = ''.join(i)
+#     if a[0] != 'Й' and a.count('АЕ')==0:
+#         cnt+=1
 
-print(cnt)
-from itertools import *
-cnt = 0 
-for i in product("ЕГЭ",repeat=5):
-    if i[0] not in "Г":
-        cnt+=1
-print(cnt)
+# print(cnt)
+# from itertools import *
+# cnt = 0 
+# for i in product("ЕГЭ",repeat=5):
+#     if i[0] not in "Г":
+#         cnt+=1
+# print(cnt)
+
+# from itertools import *
+# cnt = 0
+# for i in product("КОНТЕ",repeat=5):
+#     a = ''.join(i)
+#     if a[0] not in "К""Н""Т"and a[4] not in "О""Е":
+#         cnt+=1
+# print(cnt)
+
+# from itertools import *
+# cnt = 0 
+# for i in product("АНЮШК",repeat=5):
+#     a = ''.join(i)
+#     if a.count('А')>=3:
+#         cnt+=1
+# print(cnt)
+
+# from itertools import *
+# cnt = 0
+# for i in product("ДАНИЛ",repeat=6):
+#     a = ''.join(i)
+#     if a.count("А")==1 and a.count("Д")==1 and a[5] not in "А":
+#         cnt+=1
+# print(cnt)
+
+# from itertools import *
+# cnt = 0 
+# for i in permutations("0123456"):
+#     a = ''.join(i)
+#     if a[0]!='0' and((int(a[0])%2==0 and int(a[1])%2 !=0 and int(a[2])%2==0  
+#         and int(a[3])%2 !=0 and int(a[4])%2==0 and int(a[5])%2 !=0) or (int(a[0])%2!=0 and int(a[1])%2 ==0 and  
+#         int(a[2])%2!=0 and int(a[3])%2 ==0 and int(a[4])%2 !=0 and int(a[5])%2==0)):
+
+#         cnt+=1
+# print(cnt)
+
+
+# from itertools import *
+# cnt = set()
+# for i in permutations('ДАНИССИМО'):
+#     cnt.add(i)
+# print(len(cnt))
+
+# from itertools import *
+# cnt = 0
+# for i in product("АЛЕКСЙ",repeat=6):
+#     a = ''.join(i)
+#     b = ["АЙ","ЙА"]
+#     if a[0]!='Й' and a[-1]!='Й' and a.count('Й')<=1 and b[0] not in a and b[-1] not in a:
+#         cnt+=1
+#         print(a)
+# print(cnt,(a))
+
+# from itertools import *
+# cnt = set()
+# for i in permutations("ДЫНЬКА"):
+#     a = ''.join(i)
+#     b = ["ЫЬ","АЬ"]
+#     if a[0]!="Ь" and b[0] not in a and b[1] not in a:
+#         cnt.add(a)
+# print(len(cnt))

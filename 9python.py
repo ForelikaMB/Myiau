@@ -37,10 +37,29 @@
 #     if (set(a.count)==3) and (a[2]**2<a[1]**2+a[0]**2):
 #         cout+=1
 # print(cout)
-f = open('tip.txt')
-cnt = 0
-for i in f:
-    a = sorted([int(x)for x in i.split()])
-    if ((set(a.count)==3) and ((a.count) <=5 )) and (a[0]>= a[1] or a[0]>= a[2] or a[0]>= a[3] or a[0]>= a[4] or a[0]>=a[5]):
+# f = open('tip.txt')
+# cnt = 0
+# for i in f:
+#     a = sorted([int(x)for x in i.split()])
+#     if ((set(a.count)==3) and ((a.count) <=5 )) and (a[0]>= a[1] or a[0]>= a[2] or a[0]>= a[3] or a[0]>= a[4] or a[0]>=a[5]):
+#         cnt+=1
+#         print(cnt)
+
+cnt = 0 
+for i in open('4.txt'):
+    a = [int(x)for x in i.split()]
+    if (a[0]==90 and int(int(a[0])+ int(a[1]) +int(a[-1]))==180) or \
+       (a[1]==90 and int(int(a[0])+ int(a[1]) +int(a[-1]))==180) \
+    or (a[-1]==90 and int(int(a[0])+ int(a[1]) +int(a[-1]))==180):
         cnt+=1
-        print(cnt)
+        print(a)
+print(cnt)
+
+# cnt = 0
+# for i in open('4.txt'):
+    
+#     a = sorted([int(x)for x in i.split()])
+#     if (a[0]==90 and ((a[1]) +(a[-1]))==90) or (a[1]==90 and ((a[0] +(a[-1]))==90) or (a[-1]==90 and ((a[0])+ (a[1])))==90):
+#         cnt+=1
+#         print(a)
+# print(cnt)

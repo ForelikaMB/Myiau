@@ -23,7 +23,7 @@
 
 
 
-
+#
 # def center(c):
 #     mindist = 10**10
 #     xc = yc = 0
@@ -34,7 +34,7 @@
 #         if curl < mindist:
 #             mindist,xc,yc = curl,i[0],i[1]
 #     return xc, yc
-
+#
 # f = open('27B_2.txt')
 # c1 = []; c2 = []; c3=[]
 # f.readline()
@@ -47,12 +47,12 @@
 # x2,y2 = center(c2)
 # x3,y3 = center(c3)
 # print(int((x1+x2+x3)*100000/3), int((y1+y2+y3)*100000/3))
-
-from ipaddress import *
-ip = ip_network(f"123.222.111.192/255.255.255.248",0)
-cnt=0
-for net in ip:
-    b = f'{int(net):b}'
-    if b[-8:].count("0")%3!=0:
-        cnt+=1
-print(cnt)
+#
+# from ipaddress import *
+# ip = ip_network(f"123.222.111.192/255.255.255.248",0)
+# cnt=0
+# for net in ip:
+#     b = f'{int(net):b}'
+#     if b[-8:].count("0")%3!=0:
+#         cnt+=1
+# print(cnt)

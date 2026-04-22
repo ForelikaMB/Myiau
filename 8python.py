@@ -172,3 +172,16 @@
 #     if a[0]!="Ь" and b[0] not in a and b[1] not in a:
 #         cnt.add(a)
 # print(len(cnt))
+
+# from itertools import *
+# n = 0 
+# for x in product('АПРЕЛЬ',repeat=5):
+#     s = ''.join(x)
+#     n+=1
+#     if ()
+k = 0
+from itertools import *
+for x , bup in enumerate(product('АВТОБУС',repeat=5),0):
+    f = ''.join(bup)
+    k+=1
+    print(f,k)

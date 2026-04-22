@@ -288,14 +288,61 @@
 #          a.append(int(r,2))
 # print(max(a))
 
-a = []
-for n in range(101,1000):
-    r = hex(n)[2:]
-    r = r.replace("b",'2')
-    if len([x for x in r if x in '13579bdf'])>2:
-        r+="e"
+# a = []
+# for n in range(101,1000):
+#     r = hex(n)[2:]
+#     r = r.replace("b",'2')
+#     if len([x for x in r if x in '13579bdf'])>2:
+#         r+="e"
+#     else:
+#         r= "f"+ r
+#         if int(r,16)>4001:
+#             a.append([int(r,16),n])
+# print(sorted(a))
+# s = []
+# for n in range(1,10000):
+#     r = bin(n)[2:]
+#     if r.count('0')%2==0:
+#         r = r + r.count('0')*"0"
+#     else: 
+#         r = r.count('1')*'1' + r
+#     if int(r,2)>2000:
+#         s.append(n)
+
+# print(min(s))
+# c = []
+# def troi(n):
+#     s = ''
+#     while n >0:
+#          s = str(n%3) +s
+#          n//=3
+#     return s
+
+# for n in range(1,1000):
+#     r = troi(n)
+#     if n%3==0:
+#           r = r + r[-2:]
+#     else:
+#           r = r + troi(((n%3)*5))
+#     if int(r,3)>150:
+#          c.append(int(r,3))
+# print(min(c))
+c = ()
+def troi(n):
+    s = ''
+    while n>0:
+        s = str(n%3) + s
+        n//=3
+    return s
+for n in range(1,1000):
+    r = troi(n)
+    summa = sum(int(d) for d in r )
+    r = r + r[-1]
+    if summa%3==0:
+        r = '2'+r+'1'
     else:
-        r= "f"+ r
-        if int(r,16)>4001:
-            a.append([int(r,16),n])
-print(sorted(a))
+        r = r + troi((summa%3)*2)
+    if int(r)>1000:
+        c += (int(r,3))
+
+print(min(c))

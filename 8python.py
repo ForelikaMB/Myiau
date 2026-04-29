@@ -179,9 +179,16 @@
 #     s = ''.join(x)
 #     n+=1
 #     if ()
-k = 0
+# k = 0
+# from itertools import *
+# for x , bup in enumerate(product('АВТОБУС',repeat=5),0):
+#     f = ''.join(bup)
+#     if ('А' and 'О') not in f and f[-1]=='Б' and f[-2]=="С" and f.count('А')==0 and f.count('В')==1 and f.count('Т')==1 and f.count('О')==0 and f.count('Б')==1 and f.count('У')==1 and f.count('С')==1:
+#         k+=1
+#         print(f,k)
+
 from itertools import *
-for x , bup in enumerate(product('АВТОБУС',repeat=5),0):
-    f = ''.join(bup)
-    k+=1
-    print(f,k)
+for x , bup in enumerate(product(sorted("ЛАЙМ"),repeat=5),1):
+    v = ''.join(bup)
+    if 'ЛЛ' not in v and v.count('М') <=1:
+        print(bup,x)

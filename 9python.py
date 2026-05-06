@@ -136,13 +136,23 @@
 #         cnt+=1
 # print(cnt)
 
-cnt=0
-for i in open('1.txt'):
-    a = ([int(x)for x in i.split()])
-    b = sorted([x for x in a if a.count(x)%2==0])
-    if len(b)==len(a)-len(b):
-        if (b[0]+b[2])==(b[1]+b[1])==(b[3]+b[0]):
-                cnt +=1
-print(cnt)
+# cnt=0
+# for i in open('1.txt'):
+#     a = ([int(x)for x in i.split()])
+#     b = sorted([x for x in a if a.count(x)%2==0])
+#     if len(b)==len(a)-len(b):
+#         if (b[0]+b[2])==(b[1]+b[1])==(b[3]+b[0]):
+#                 cnt +=1
+# print(cnt)
+
+# cnt = 0
+# for i in open('1.txt'):
+#     bruh = ([int(x) for x in i.split()])
+#     a = len(bruh) != len(set(bruh))
+#     b = sum(1 for x in bruh if x % 2 != 0)==3
+#     if a != b:
+#         cnt+=1
+# print(cnt)
+
 
             

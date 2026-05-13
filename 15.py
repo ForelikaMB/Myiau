@@ -31,9 +31,61 @@
 #         cnt+=1
 # print(cnt)
 
-def f(x,a):
-    return((x%17==0) <= (x%53!=0)) or (a>=90000000-x)
-for a in range(89999000,90001000):
-    if all(f(x,a) for x in range(1,10000)):
+# def f(x,a):
+#     return((x%17==0) <= (x%53!=0)) or (a>=90000000-x)
+# for a in range(89999000,90001000):
+#     if all(f(x,a) for x in range(1,10000)):
+#         print(a)
+#         break
+
+# отрезки
+
+# def f(x):
+#     p = 57892<=x<=478683
+#     q = 123456<=x<=760123
+#     r = 592916<=x<=977654
+#     a = a1<=x<=a2
+#     return q <= ((not p) <= (((not r) and (not a)) <= (not
+# q)))
+# ox = [y for x in (57892,123456,592916,478683,760123,977654) 
+# for y in (x, x+0.01, x-0.01)]
+# m = []
+# for a1 in ox:
+#     for a2 in ox:
+#         if a2>a1 and all(f(x)==1 for x in ox):
+#             m.append(a2-a1)
+# print(round(min(m)))
+
+#графики
+# def f(x,y,a):
+#     return ((y+2*x)<a) or (x>15) or (y>30)
+# for a in range(1000):
+#     if all(f(x,y,a) for x in range(1000) for y in range(1000)):
+#         print(a)
+#         break
+
+# def f(x,y,a):
+#     return ((2*x +3*y)>30) or ((x+y)<=a)
+# for a in range(1000):
+#     if all(f(x,y,a) for x in range(1000) for y in range(1000)):
+#         print(a)
+#         break
+
+# def f(x,y,a):
+#     return ((2*x + y )!=70) or (x<y) or (a<x)
+# for a in range(1000):
+#     if all(f(x,y,a) for x in range(1000) for y in range(1000)):
+#         print(a)
+        
+# def f(x,y,a):
+#     return (x*y<120) or (y>a) or (x>a)
+# for a in range(1000):
+#     if all(f(x,y,a) for x in range(1000) for y in range(1000)):
+#         print(a)
+        
+def f(x,y,a):
+    return ((680*y + 256*x)<a) or ((5*x + 3*y)>11111)
+for a in range(10000000):
+    if all(f(x,y,a) for x in range(10000000) for y in range(10000000)):
         print(a)
-        break
+        

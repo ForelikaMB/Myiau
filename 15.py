@@ -83,9 +83,46 @@
 #     if all(f(x,y,a) for x in range(1000) for y in range(1000)):
 #         print(a)
         
-def f(x,y,a):
-    return ((680*y + 256*x)<a) or ((5*x + 3*y)>11111)
-for a in range(10000000):
-    if all(f(x,y,a) for x in range(10000000) for y in range(10000000)):
-        print(a)
+# def f(x,y,a):
+#     return ((680*y + 256*x)<a) or ((5*x + 3*y)>11111)
+# for a in range(10000000):
+#     if all(f(x,y,a) for x in range(10000000) for y in range(10000000)):
+#         print(a)
         
+#коньюнкция 
+
+# def f(x,y):
+#     return((x&52!=0)and(x&48==0))<= (not(x&y==0))
+# for y in range(1000):
+#     if all(f(x,y) for x in range(1000)):
+#         print(y)
+#         break
+# print(bin(52)[2:])
+# print(bin(48)[2:])
+# print(int('100',2))
+
+# def f(x,y):
+#     return (x&29==0)or ((x&11==0)<=(not(x&y==0)))
+# for y in range(1,1000):
+#     if all(f(x,y) for x in range(15,31)):
+#         print(y)
+#         break
+
+# def f(x,y):
+#     return (x&y!=0)<=((x&698==0)<=(x&321!=0))
+# for y in range(1,2000):
+#     if all(f(x,y) for x in range(1,2000)):
+#         print(y)
+        
+# def f(x,y):
+#     return (x&y!=0)<=(((x&17==0)and(x&5==0))<=(x&3!=0))
+# for y in range(1000):
+#     if all(f(x,y) for x in range(1000)):
+#         print(y)
+
+def f(x,y):
+    return ((x&49)==0)<=((x&28!=0)<=(x&y!=0))
+for y in range(1000):
+    if all(f(x,y) for x in range(1000)):
+        print(y)
+        break

@@ -154,5 +154,15 @@
 #         cnt+=1
 # print(cnt)
 
+f = open('9.txt')
+k = 0
+for s in f:
+    a = [int(x) for x in s.split()]
+    a1 = [x for x in a if a.count(x)==4]
 
+    if len(a1)==4 :
+        a2 = [x for x in a if x != a[0]]
+        if a1[0] ** 2 < sum(a2):
+            k+=1
+print(k,a)
             

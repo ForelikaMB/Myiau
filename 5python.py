@@ -327,22 +327,32 @@
 #     if int(r,3)>150:
 #          c.append(int(r,3))
 # print(min(c))
-c = ()
-def troi(n):
-    s = ''
-    while n>0:
-        s = str(n%3) + s
-        n//=3
-    return s
-for n in range(1,1000):
-    r = troi(n)
-    summa = sum(int(d) for d in r )
-    r = r + r[-1]
-    if summa%3==0:
-        r = '2'+r+'1'
-    else:
-        r = r + troi((summa%3)*2)
-    if int(r)>1000:
-        c += (int(r,3))
+# c = ()
+# def troi(n):
+#     s = ''
+#     while n>0:
+#         s = str(n%3) + s
+#         n//=3
+#     return s
+# for n in range(1,1000):
+#     r = troi(n)
+#     summa = sum(int(d) for d in r )
+#     r = r + r[-1]
+#     if summa%3==0:
+#         r = '2'+r+'1'
+#     else:
+#         r = r + troi((summa%3)*2)
+#     if int(r)>1000:
+#         c += (int(r,3))
 
-print(min(c))
+# print(min(c))
+cnt = []
+for n in range(1,100000):
+    r = bin(n)[2:]
+    if n%2==0: r = '1' + r + '0'
+    if n%2!=0:r =  '11'+ r +'11'
+    if int(r,2)>225:
+        cnt.append(r)
+        
+print(min(cnt))
+print(int('110000000',2))

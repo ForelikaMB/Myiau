@@ -183,12 +183,47 @@
 # from itertools import *
 # for x , bup in enumerate(product('АВТОБУС',repeat=5),0):
 #     f = ''.join(bup)
-#     if ('А' and 'О') not in f and f[-1]=='Б' and f[-2]=="С" and f.count('А')==0 and f.count('В')==1 and f.count('Т')==1 and f.count('О')==0 and f.count('Б')==1 and f.count('У')==1 and f.count('С')==1:
+#     if ('А' and 'О') not in f and f[-1]=='Б' and f[-2]=="С" and f.count('А')==0 and f.count('В')==1
+#  and f.count('Т')==1 and f.count('О')==0 and f.count('Б')==1 and f.count('У')==1 and f.count('С')==1:
 #         k+=1
 #         print(f,k)
 
-from itertools import *
-for x , bup in enumerate(product(sorted("ЛАЙМ"),repeat=5),1):
-    v = ''.join(bup)
-    if 'ЛЛ' not in v and v.count('М') <=1:
-        print(bup,x)
+# from itertools import *
+# for x , bup in enumerate(product(sorted("ЛАЙМ"),repeat=5),1):
+#     v = ''.join(bup)
+#     if 'ЛЛ' not in v and v.count('М') <=1:
+#         print(bup,x)
+
+# from itertools import *
+# cnt=1
+# for i in product(sorted('АГИЛМОРТ'),repeat=5):
+#     v = ''.join(i)
+#     cnt +=1
+#     if cnt%2==0 and v[0]!='А' and v[0]!='Г' and v.count('Р')>=2:
+#         print(cnt,v)
+#         break
+
+
+from itertools import product
+
+# Определяем алфавит в алфавитном порядке
+alphabet = sorted("АЛГОРИТМ")
+
+# Инициализируем счётчик номеров слов
+count = 1
+
+# Перебираем все 5-буквенные комбинации из заданного алфавита
+for word_tuple in product(alphabet, repeat=5):
+    # Преобразуем кортеж букв в строку (слово)
+    word = ''.join(word_tuple)
+    
+    # Проверяем условия задачи:
+    # 1. Номер слова чётный
+    # 2. Слово не начинается с букв А или Г
+    # 3. Слово содержит не менее двух букв Р
+    if (count % 2 == 0 and  # чётный номер
+        word not in ['А', 'Г'] and  # не начинается с А или Г
+        word.count('Р') >= 2):  # содержит не менее двух букв Р
+        
+        print(f"Искомое слово: {word}, номер: {count}")
+        break

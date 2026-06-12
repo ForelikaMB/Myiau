@@ -162,13 +162,13 @@
 #         sum+=(c3//73)
 # print(sum)
 
-for p in range(100):
-    for x in range(p):
-        for y in range(p):
-            for z in range(p):
-                for w in range(p):
-                    c1 = z*p**4 + x*p**3 + y*p**2 + x*p**1 + 9*p**0
-                    c2= x*p**4 + y*p**3 + 7*p**2 + 4*p**1 + 8*p**0
-                    c3= w*p**4 + z*p**3 + x*p**2 + 6*p**1 + 1*p**0
-                    if c1+c2==c3:
-                        print(x*p**3 + y*p**2+ z*p**1 + w*p**0)
+# for p in range(100):
+#     for x in range(p):
+#         for y in range(p):
+#             for z in range(p):
+#                 for w in range(p):
+#                     c1 = z*p**4 + x*p**3 + y*p**2 + x*p**1 + 9*p**0
+#                     c2= x*p**4 + y*p**3 + 7*p**2 + 4*p**1 + 8*p**0
+#                     c3= w*p**4 + z*p**3 + x*p**2 + 6*p**1 + 1*p**0
+#                     if c1+c2==c3:
+#                         print(x*p**3 + y*p**2+ z*p**1 + w*p**0)

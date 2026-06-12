@@ -203,27 +203,31 @@
 #         print(cnt,v)
 #         break
 
+# from itertools import product 
+# cnt = 0
+# for i in product('012345678', repeat=5):
+#     a = ''.join(i)
+#     for x in '357': a = a.replace(x,'1')
+#     if a[0] !='0' and a.count('0')==1 and '01' not in a and '10' not in a:
+#         cnt+=1
+# print(cnt)
 
-from itertools import product
+# from itertools import product
+# cnt = 0 
+# for i in product('012345678',repeat=5):
+#     a = ''.join(i)
+#     for x in "678": a = a.replace(x,'5')
+#     if a[0] != '0' and a.count('3')==1 and "53" not in a and '35' not in a :
+#         cnt+=1
+# print(cnt)
 
-# Определяем алфавит в алфавитном порядке
-alphabet = sorted("АЛГОРИТМ")
+# from itertools import *
+# s = set ()
+# for x in permutations('ПАРИЖАНКА',9):
+#     a = ''.join(x)
+#     b = a.replace('И',"А")
+#     if b.count("АА") ==1  and 'ААА' not in b:
+#         s.add(a)
+# print(len(s))
 
-# Инициализируем счётчик номеров слов
-count = 1
 
-# Перебираем все 5-буквенные комбинации из заданного алфавита
-for word_tuple in product(alphabet, repeat=5):
-    # Преобразуем кортеж букв в строку (слово)
-    word = ''.join(word_tuple)
-    
-    # Проверяем условия задачи:
-    # 1. Номер слова чётный
-    # 2. Слово не начинается с букв А или Г
-    # 3. Слово содержит не менее двух букв Р
-    if (count % 2 == 0 and  # чётный номер
-        word not in ['А', 'Г'] and  # не начинается с А или Г
-        word.count('Р') >= 2):  # содержит не менее двух букв Р
-        
-        print(f"Искомое слово: {word}, номер: {count}")
-        break

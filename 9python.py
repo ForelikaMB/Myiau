@@ -167,4 +167,15 @@
 #         print(k,a)
 
 f = open('1.txt')
+k = 0 
+for s in f :
+    a = (int(x) for x in s.split())
+    a1 = [int(x) for x in range(1,178)]
+    a2 = [int(x) for x in range(1,178)]
+    a3 = [int(x) for x in range(1,178)]
+    a4 = [int(x) for x in range(1,178)]
+    if (a[0] +  a[1] + a[2] + a[3])==180:
+        k+=1
+print(k)
+    
             

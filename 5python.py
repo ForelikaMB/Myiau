@@ -346,13 +346,23 @@
 #         c += (int(r,3))
 
 # print(min(c))
-cnt = []
-for n in range(1,100000):
-    r = bin(n)[2:]
-    if n%2==0: r = '1' + r + '0'
-    if n%2!=0:r =  '11'+ r +'11'
-    if int(r,2)>225:
-        cnt.append(r)
+# cnt = []
+# for n in range(1,100000):
+#     r = bin(n)[2:]
+#     if n%2==0: r = '1' + r + '0'
+#     if n%2!=0:r =  '11'+ r +'11'
+#     if int(r,2)>225:
+#         cnt.append(r)
         
+# print(min(cnt))
+# print(int('110000000',2))
+
+cnt = []
+
+for n in range(1,1000):
+    r = bin(n)[2:]
+    if n%2==0: r= r + '01'
+    else : r = '1' + r + '1'
+    if int(r,2)>156:
+        cnt.append(n)
 print(min(cnt))
-print(int('110000000',2))

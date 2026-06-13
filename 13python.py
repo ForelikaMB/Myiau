@@ -97,12 +97,12 @@
 #     if b.count('1')%4==0:
 #         cnt+=1   
 # print(cnt)
-"""
-from ipaddress import *
-for i in range(33):
 
-    net = ip_network(f'45.172.106.203/255.255.252.0',0)
-    print(net[1])"""
+# from ipaddress import *
+# for i in range(33):
+
+#     net = ip_network(f'45.172.106.203/255.255.252.0',0)
+#     print(net[1])
 
 # from ipaddress import *
 # for m in range(33):
@@ -245,13 +245,40 @@ for i in range(33):
 # print(m)
 # break
 
-from ipaddress import  *
+# from ipaddress import  *
 
-for a in range(1,256):
-    b = ip_address(f'192.214.{a}.184')
-    ip = ip_network(f"192.214.{a}.184/255.255.255.224",0)
-    for k in b:
-        if f'{int(k):b}'.count('1')>15:
-           print(ip)
+# for a in range(1,256):
+#     b = ip_address(f'192.214.{a}.184')
+#     ip = ip_network(f"192.214.{a}.184/255.255.255.224",0)
+#     for k in b:
+#         if f'{int(k):b}'.count('1')>15:
+#            print(ip)
+
+
+from ipaddress import ip_network, ip_address
+
+# Исходные адреса
+ip1 = ip_address('95.24.2.9')
+ip2 = ip_address('95.24.3.10')
+
+# Находим общую сеть (маска будет определена автоматически)
+# strict=False позволяет создать сеть, даже если IP не является чистым сетевым адресом
+network = ip_network(f"{ip1}/{ip2}", strict=False)
+
+count = 0
+
+# Перебираем все адреса в сети
+for ip in network:
+    # Переводим IP в целое число, затем в двоичную строку (без префикса '0b')
+    binary_str = bin(int(ip))[2:]
+    
+    # Считаем количество нулей
+    zero_count = binary_str.count('0')
+    
+    # Проверяем условие: чётное количество нулей
+    if zero_count % 2 == 0:
+        count += 1
+
+print(count)
 
 

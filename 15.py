@@ -120,9 +120,9 @@
 #     if all(f(x,y) for x in range(1000)):
 #         print(y)
 
-def f(x,y):
-    return ((x&49)==0)<=((x&28!=0)<=(x&y!=0))
-for y in range(1000):
-    if all(f(x,y) for x in range(1000)):
-        print(y)
-        break
+# def f(x,y):
+#     return ((x&49)==0)<=((x&28!=0)<=(x&y!=0))
+# for y in range(1000):
+#     if all(f(x,y) for x in range(1000)):
+#         print(y)
+#         break

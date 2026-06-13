@@ -80,18 +80,17 @@
 #     if n>9 and n%5==0:
 
 
-import sys
-from functools import lru_cache
-sys.setrecursionlimit(20000)
-@lru_cache(None)
-def f(n):
-    return 2*(g(n-3)+8)
-@lru_cache(None)
-def g(n):
-    if n<10: return 2*n
-    if n>=10: return (g(n-2)+1)
-for n in range(1,15550):f(n)
-print(f(15548))
-
+# import sys
+# from functools import lru_cache
+# sys.setrecursionlimit(20000)
+# @lru_cache(None)
+# def f(n):
+#     return 2*(g(n-3)+8)
+# @lru_cache(None)
+# def g(n):
+#     if n<10: return 2*n
+#     if n>=10: return (g(n-2)+1)
+# for n in range(1,15550):f(n)
+# print(f(15548))
 
 

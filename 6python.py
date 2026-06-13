@@ -299,34 +299,34 @@
 # done()
 
 
-from turtle import *
+# from turtle import *
 
 
-screensize(2000,2000)
-tracer(0)
+# screensize(2000,2000)
+# tracer(0)
 
-m=30
-left(90)
-pendown()
-for x in range(2):
-    forward(13*m)
-    right(90)
-    forward(20*m)
-    right(90)
-penup()
-forward(8*m)
-right(90)
-back(3*m)
-left(90)
-pendown()
-for x in range(2):
-    forward(16*m)
-    right(90)
-    forward(8*m)
-    right(90)
-penup()
-for x in range(-30,30):
-    for y in range(-30,30):
-        setpos(x*m,y*m)
-        dot()
-done()
+# m=30
+# left(90)
+# pendown()
+# for x in range(2):
+#     forward(13*m)
+#     right(90)
+#     forward(20*m)
+#     right(90)
+# penup()
+# forward(8*m)
+# right(90)
+# back(3*m)
+# left(90)
+# pendown()
+# for x in range(2):
+#     forward(16*m)
+#     right(90)
+#     forward(8*m)
+#     right(90)
+# penup()
+# for x in range(-30,30):
+#     for y in range(-30,30):
+#         setpos(x*m,y*m)
+#         dot()
+# done()

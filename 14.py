@@ -173,4 +173,22 @@
 #                     if c1+c2==c3:
 #                         print(x*p**3 + y*p**2+ z*p**1 + w*p**0)
 
+# cnt = []
+# ma = 0
+# for x in '0123456789ABCDEFGHIJK':
+#     for y in '0123456789ABCDEFGHIJK':
+#         b =int(f"943697{x}21",21)-int(f"2{y}9253",21)
+#         if b%20==0:
+#             max==b
+#             cnt.append(ma//2)
 
+# print(max(ma))
+
+from string import*
+for x in printable[:21]:
+    for y in printable[:21]:
+        q1 = int(f'32{y}{x}A',21)
+        q2 = int(f'16{y}18',21)
+        q = q1 + q2
+        if q % 12 == 0:
+            print(y,q//12)

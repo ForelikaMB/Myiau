@@ -78,13 +78,15 @@
 #     if "3888" in s :
 #         s = s.replace("3888","1",1)
 # print(s)
-s = 77*'1'
-while "11" in s:
-    if "222" in s :
-        s = s.replace("222","1",1)
-    else:
-        s = s.replace("11","2",1)
+# s = 77*'1'
+# while "11" in s:
+#     if "222" in s :
+#         s = s.replace("222","1",1)
+#     else:
+#         s = s.replace("11","2",1)
     
-print(s)
+# print(s)
 
-            
+b = bin(11001)[2:]
+print(b)
+print(int('000110010',2))

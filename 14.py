@@ -184,11 +184,38 @@
 
 # print(max(ma))
 
-from string import*
-for x in printable[:21]:
-    for y in printable[:21]:
-        q1 = int(f'32{y}{x}A',21)
-        q2 = int(f'16{y}18',21)
-        q = q1 + q2
-        if q % 12 == 0:
-            print(y,q//12)
+# from string import*
+# for x in printable[:21]:
+#     for y in printable[:21]:
+#         q1 = int(f'32{y}{x}A',21)
+#         q2 = int(f'16{y}18',21)
+#         q = q1 + q2
+#         if q % 12 == 0:
+#             print(y,q//12)
+# c = []
+# cnt = 0
+# for x in range(1,2300):
+    
+#     v = 7**350 + 7**150 - x
+#     while x>0:
+#         if x%7 == 0:
+#             cnt+=1
+#         if cnt==200:
+#             c.append(x)
+# print(min(c))
+
+# n = []
+# for x in '0123456789ABCDEFGHIGKLMNOPQRS':
+#     v = int(f'42{x}158',29) + int(f'16{x}234',29)
+#     if v%28==0:
+#         n.append(x)
+
+# print((int(f'42A158',29) + int(f'16A234',29))//28)
+
+from string import printable
+v = 2*729**75 + 2*243**78 + 81**81 + 2*9**87 +58
+cb=[]
+while v>0:
+    cb.append(v%27)
+    v//=27
+print(cb.count(0))

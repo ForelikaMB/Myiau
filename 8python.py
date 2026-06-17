@@ -231,10 +231,65 @@
 # print(len(s))
 
 
+# from itertools import *
+# cnt = 0
+# for i in product('0123456',repeat=7):
+#     a = ''.join(i)
+#     if a[0]!='0' and a[0] !='3' and a[0]!='5' and not('44'  in a and '22' in a) :
+#         cnt+=1
+# print(cnt)
+
+# from itertools import *
+# cnt=0 
+# for i in product('ВГОРСТ',repeat=6):
+#     b = ''.join(i)
+#     cnt+=1
+#     if b == 'СГОВОР':
+#           print(b,cnt)
+          
+#     i = b.replace("С",'Р').replace("Г","Р").replace("В","Р").replace("Т","Р")
+#     if 'РР' not in i:
+#             print(i,cnt)
+            
+# b = 'СГОВОР'
+# i = b.replace("С",'Р').replace("Г","Р").replace("В","Р")
+# print(i)
+
+# from itertools import *
+# cnt = 0 
+# for i in product("БМНРЮ",repeat=6):
+#     cnt+=1
+#     b = ''.join(i)
+#     if cnt%2!=0 and b[0]!='М' and b.count('Р')>=2 and 'Ю' not in b:
+#         print(cnt,b)
+
+
+# from itertools import *
+# cnt = 0
+# for i in product('ИНЬЮ',repeat=5):
+#     cnt+=1
+#     b = ''.join(i)
+#     if b.count('И')==2 or b.count('Ю')==2 or b.count('И')==1 and b.count('Ю')==1:
+
+#         print(cnt,i)
+
+# from itertools import *
+# cnt = 0
+# for i in permutations("ХОЧУНАБЮДЖЕТ"):
+#     b = ''.join(i)
+#     i = b.replace("О","Е").replace("У","Е").replace("А","Е").replace("Ю","Е")
+#     if "ЕЕЕЕЕ" not in i:
+#         cnt+=1
+        
+# print(cnt,i)
+
 from itertools import *
-cnt = 0
-for i in product('0123456',repeat=7):
-    a = ''.join(i)
-    if a[0]!='0' and a[0] !='3' and a[0]!='5' and not('44'  in a and '22' in a) :
-        cnt+=1
-print(cnt)
+k = 0
+cnt = []
+for i in product('ВИЛМОС' , repeat=5):
+    b = ''.join(i)
+    k+=1
+    if k%2 !=0:
+        if b[0] !='О' and b[0] != 'С' and b.count('В') == 1 and b.count('С') <= 1:
+            cnt.append(k)
+print(max(cnt))

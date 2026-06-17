@@ -330,3 +330,53 @@
 #         setpos(x*m,y*m)
 #         dot()
 # done()
+
+
+from turtle import *
+
+screensize(2000,2000)
+tracer(0)
+left(90)
+
+m = 10
+
+for n in range(15):
+    for i in range(20):
+        forward(40*m)
+        right(90)
+    left(90)
+penup()
+for x in range(-60,60):
+    for y in range(-60,60):
+        setpos(x*m,y*m)
+        dot(5,'red')
+done()
+
+# from turtle import *
+# screensize(2000,2000)
+# tracer(0)
+
+# m=30
+
+# left(90)
+
+# for i in range(2):
+#     forward(7*m)
+#     right(90)
+#     forward(14*m)
+#     right(90)
+# penup()
+# forward(5*m)
+# right(90)
+# back(3*m)
+# left(90)
+# pendown()
+# for n in range(4):
+#     forward(10*m)
+#     left(270)
+# penup()
+# for x in range(-30,30):
+#     for y in range(-30,30):
+#         setpos(x*m,y*m)
+#         dot(5,'red')
+# done()

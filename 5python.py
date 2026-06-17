@@ -366,3 +366,50 @@
 #     if int(r,2)>156:
 #         cnt.append(n)
 # print(min(cnt))
+
+# cnt = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if n%3==0: r = r +r[:3]
+#     else: r = r + bin((n%3)*3)[2:]
+#     if int(r,2)<76:
+#         cnt.append(n)
+# print(max(cnt))
+
+
+# cnt = []
+# for n in range(1,1000):
+#     r = bin(n)[2:]
+#     if r.count('1')%2==0: r = '11'+r
+#     else: r = r+ '00'
+#     if int(r,2)>116:
+#         cnt.append(n)
+        
+# print(min(cnt))
+
+# cnt = []
+# for n in range(1,1000):
+    # r = bin(n)[2:]
+#     if n%3==0: r = r + r[:3]
+#     else: r = r +  bin((n%3)*3)[2:]
+#     if int(r,2)>=200:
+#         cnt.append(n)
+# print(min(cnt))
+
+def fifti(i):
+    s = ''
+    while i>0:
+        s = str(i%5) + s
+        i//=5
+    return s
+
+cnt = []
+for N in range(1,1000):
+    r = fifti(N)
+    if N%10==0: r = r + r[:5]
+    else: r = fifti((N%10)*3) + r
+    if int(r,5)<176:
+        cnt.append(N)
+
+print(fifti(10))
+print(cnt)

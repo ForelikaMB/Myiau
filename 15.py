@@ -126,3 +126,4 @@
 #     if all(f(x,y) for x in range(1000)):
 #         print(y)
 #         break
+

@@ -389,27 +389,47 @@
 
 # cnt = []
 # for n in range(1,1000):
-    # r = bin(n)[2:]
+#     r = bin(n)[2:]
 #     if n%3==0: r = r + r[:3]
 #     else: r = r +  bin((n%3)*3)[2:]
 #     if int(r,2)>=200:
 #         cnt.append(n)
 # print(min(cnt))
 
-def fifti(i):
+# def fifti(i):
+#     s = ''
+#     while i>0:
+#         s = str(i%5) + s
+#         i//=5
+#     return s
+
+# cnt = []
+# for N in range(1,1000):
+#     r = fifti(N)
+#     if N%10==0: r = r + r[:5]
+#     else: r = fifti((N%10)*3) + r
+#     if int(r,5)<176:
+#         cnt.append(N)
+
+# print(fifti(10))
+# print(cnt)
+
+def f(n):
     s = ''
-    while i>0:
-        s = str(i%5) + s
-        i//=5
+    while n>0:
+        s = str(n%3) +s
+        n//=3
     return s
-
 cnt = []
-for N in range(1,1000):
-    r = fifti(N)
-    if N%10==0: r = r + r[:5]
-    else: r = fifti((N%10)*3) + r
-    if int(r,5)<176:
-        cnt.append(N)
+c = 0
+for n in range(1,1000):
+    r = f(n)
+    if n%3==0: r = r + r[-2:]
+    else: r = r +f(sum(map(int,r))*3)
+    if int(r,3)>208 and int(r,3)%2!=0:
+        cnt.append(int(r,3))  
+print(min(cnt))
 
-print(fifti(10))
-print(cnt)
+
+# k = '123456'
+# print(k[-2:])

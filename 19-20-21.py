@@ -66,13 +66,22 @@
 #     if m == 0: return 0
 #     steps = [f(s+1,a, m-1),f(s*2,a,m-1),f(s,a+1,m-1),f(s, a*2,m-1)]
 #     return any(steps) if m%2!=0 else all(steps)
-# # print([x for x in range(1,110)if f(13,x,2)])
+# print([x for x in range(1,110)if f(13,x,2)])
 # print([x for x in range(1,110) if not f(13,x,1) and f(13,x,3)])
 # print([x for x in range(1,110) if not f(13,x,2) and f(13,x,4)])
 
-def f(s,m):
-    if s >=124: return m%2 ==0
-    if m == 0 : return 0 
-    steps = [f(s+1,m-1),f(s+5,m-1),f(s*3,m-1)]
-    return any(steps) if m%2 !=0 else all(steps)
-print([x for x in range(1,124) if f(x,2)])
+# def f(s,m):
+#     if s >=124: return m%2 ==0
+#     if m == 0 : return 0 
+#     steps = [f(s+1,m-1),f(s+5,m-1),f(s*3,m-1)]
+#     return any(steps) if m%2 !=0 else all(steps)
+# print([x for x in range(1,124) if f(x,2)])
+
+def f (a,m):
+    if a>=125: return m%2==0
+    if m == 0 : return 0
+    steps = [f(a+2,m-1),f(a+4,m-1),f(a*2,m-1)]
+    return any(steps) if m%2!=0 else all(steps)
+print([x for x in range(1,125) if f(x,2)])
+print([x for x in range(1,125) if not f(x,1) and f(x,3)])
+print([x for x in range(1,125) if not f(x,2) and f(x,4)])

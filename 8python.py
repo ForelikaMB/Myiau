@@ -283,13 +283,25 @@
         
 # print(cnt,i)
 
+# from itertools import *
+# k = 0
+# cnt = []
+# for i in product('ВИЛМОС' , repeat=5):
+#     b = ''.join(i)
+#     k+=1
+#     if k%2 !=0:
+#         if b[0] !='О' and b[0] != 'С' and b.count('В') == 1 and b.count('С') <= 1:
+#             cnt.append(k)
+# print(max(cnt))
+
 from itertools import *
-k = 0
+x = 0
 cnt = []
-for i in product('ВИЛМОС' , repeat=5):
-    b = ''.join(i)
-    k+=1
-    if k%2 !=0:
-        if b[0] !='О' and b[0] != 'С' and b.count('В') == 1 and b.count('С') <= 1:
-            cnt.append(k)
-print(max(cnt))
+
+for i in product("АГИНРТ",repeat=6):
+    g = ''.join(i)
+    x +=1
+    if x%2!=0 and g[0] !='А' and g[0] !='И' and g[0] !='Г' and g.count('А')==1:
+        print(x,g)
+        break
+        

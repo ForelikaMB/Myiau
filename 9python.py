@@ -100,7 +100,7 @@
 # for i in open('1.txt'):
 #     a = sorted([int(x) for x in i.split()])
 #     pre = [x for x in a if a.count(x)==2]
-#     # vto = [x for x in a  if a.count(x)== 2]
+#     vto = [x for x in a  if a.count(x)== 2]
 #     tri = [x for x in a if a.count(x)== 1]
 #     if len(pre)== 4 and len(tri)== 3:
 #         if sum(pre)/4 < sum(tri)/3:
@@ -166,12 +166,50 @@
 #             k+=1
 #         print(k,a)
 
+# f = open('1.txt')
+# k = 0 
+# for s in f :
+#     a = [int(x) for x in s.split()]
+#     if (a[0] +  a[1] + a[2] + a[3])==180:
+#         k+=1
+# print(k)
+    
+# f = open('1.txt')
+# k = 0
+
+# for s in f:
+    
+#     a = [int(x) for x in s.split()]
+#     c1 = [x for x in a if a.count(x) == 3]
+#     c2 = [x for x in a if a.count(x) == 1]
+#     if len(c1)==3 and len(c2) == 4 and (c1[0] >= sum(c2)//4):
+         
+#             k+=1
+# print(k)
+
+# b = [1,2,2,2,4,1,1]
+# c1 = [x for x in b if b.count(x) == 3]
+# c2 = [x for x in b if b.count(x) == 1]
+# if len(c1)==3 and len(c2) == 4 :
+#     print(b)
+
+# k=0
+# f = open('1.txt')
+# for s in f:
+#     a = [int(x) for x in s.split()]
+#     c1 = [x for x in a if a.count(x)==2]
+#     c2 = [x for x in a if a.count(x)==1]
+#     if len(c1)==4 and len(c2)==3:
+#         if sum(c1)/4 < max(c2):
+#             k+=1
+# print(k)
+
 f = open('1.txt')
-k = 0 
-for s in f :
+k = 0
+for s in f:
     a = [int(x) for x in s.split()]
-    if (a[0] +  a[1] + a[2] + a[3])==180:
+    c1 = [x for x in a if a.count(x)==3]
+    c2 = [x for x in a if a.count(x)==1]
+    if len(c1)==3 and len(c2)==4 and max(map(int,a))!=c1[0]:
         k+=1
 print(k)
-    
-            

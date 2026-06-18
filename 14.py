@@ -212,10 +212,24 @@
 
 # print((int(f'42A158',29) + int(f'16A234',29))//28)
 
-from string import printable
-v = 2*729**75 + 2*243**78 + 81**81 + 2*9**87 +58
-cb=[]
-while v>0:
-    cb.append(v%27)
-    v//=27
-print(cb.count(0))
+# from string import printable
+# v = 2*729**75 + 2*243**78 + 81**81 + 2*9**87 +58
+# cb=[]
+# while v>0:
+#     cb.append(v%27)
+#     v//=27
+# print(cb.count(0))
+
+cnt = []
+for x in range(1,27001):
+    v = 3*27**9+2*27**6+27**3 - x
+    s=0
+    while v>0:
+        if v%27==0:
+            s+=1
+        v//=27
+    if s==6:
+        cnt.append(x)
+print(min(cnt))
+ 
+

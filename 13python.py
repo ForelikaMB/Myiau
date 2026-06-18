@@ -255,30 +255,33 @@
 #            print(ip)
 
 
-from ipaddress import ip_network, ip_address
+# from ipaddress import ip_network, ip_address
 
-# Исходные адреса
-ip1 = ip_address('95.24.2.9')
-ip2 = ip_address('95.24.3.10')
+# # Исходные адреса
+# ip1 = ip_address('95.24.2.9')
+# ip2 = ip_address('95.24.3.10')
 
-# Находим общую сеть (маска будет определена автоматически)
-# strict=False позволяет создать сеть, даже если IP не является чистым сетевым адресом
-network = ip_network(f"{ip1}/{ip2}", strict=False)
+# # Находим общую сеть (маска будет определена автоматически)
+# # strict=False позволяет создать сеть, даже если IP не является чистым сетевым адресом
+# network = ip_network(f"{ip1}/{ip2}", strict=False)
 
-count = 0
+# count = 0
 
-# Перебираем все адреса в сети
-for ip in network:
-    # Переводим IP в целое число, затем в двоичную строку (без префикса '0b')
-    binary_str = bin(int(ip))[2:]
+# # Перебираем все адреса в сети
+# for ip in network:
+#     # Переводим IP в целое число, затем в двоичную строку (без префикса '0b')
+#     binary_str = bin(int(ip))[2:]
     
-    # Считаем количество нулей
-    zero_count = binary_str.count('0')
+#     # Считаем количество нулей
+#     zero_count = binary_str.count('0')
     
-    # Проверяем условие: чётное количество нулей
-    if zero_count % 2 == 0:
-        count += 1
+#     # Проверяем условие: чётное количество нулей
+#     if zero_count % 2 == 0:
+#         count += 1
 
-print(count)
+# print(count)
 
 
+from ipaddress import *
+b = ip_network(f'190.202.83.62/255.255.252.0',0)
+print((b[-2]))

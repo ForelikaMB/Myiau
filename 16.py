@@ -93,4 +93,39 @@
 # for n in range(1,15550):f(n)
 # print(f(15548))
 
+from functools import lru_cache
+@lru_cache(70)
+def g(n):
+    if n>=248045: return n/20 +28
+    if n<248045: return g(n+9) - 4
+@lru_cache(70)
+def f(n):
+    if n>=19: return f(n-4)+3580
+    if n<19: return 6*(g(n-7)-36)
 
+
+for n in range(248060,0,-1): g(n)
+for n in range(1,248060): f(n)
+print(f(673))
+
+
+# from functools import *
+# @lru_cache(30)
+# def G(n):
+#     if n >= 248045:
+#         return n//20+28
+#     else:
+#         return G(n+9)-4
+
+# @lru_cache(30)
+# def F(n):
+#     if n >= 19:
+#         return F(n-4) + 3580
+#     else:
+#         return 6 * (G(n-7) - 36)
+
+# for n in range(248_200, 0, -1):
+#     G(n)
+# for n in range(1, 248_200):
+#     F(n)
+# print(F(673))
